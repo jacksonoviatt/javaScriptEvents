@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: skyblue;
+  height: 100vh;
+  width: 100vw;
+}
+
+#flower {
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  margin-top: -30px;
+}
+
+#flower img {
+  z-index: 5;
+  margin-bottom: -50px;
+  -webkit-transition: 2s all ease-in-out;
+  transition: 2s all ease-in-out;
+}
+
+#flower #flowerStem {
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  width: 10px;
+  height: 100px;
+  background-color: #89ad5f;
+}
+
+footer {
+  height: 20px;
+  background-color: #89ad5f;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+}
+/*# sourceMappingURL=style.css.map */
