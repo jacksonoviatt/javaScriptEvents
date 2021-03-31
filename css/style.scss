@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    background-color: skyblue;
+    background: linear-gradient(skyblue, slateblue);
     height: 100vh;
     width: 100vw;
 }
@@ -15,11 +15,12 @@ body {
     display: grid;
     align-items: center;
     justify-items: center;
-    margin-top: -30px;
+    overflow-x: hidden;
+    overflow-y: auto;
     img {
         z-index: 5;
         margin-bottom: -50px;
-        transition: 2s all ease-in-out;
+        transition: 4s all ease-in-out;
     }
     #flowerStem {
         // margin-top: -50px;
@@ -27,13 +28,34 @@ body {
         width: 10px;
         height: 100px;
         background-color: #89ad5f;
+        overflow-x: hidden;
+        overflow-y: auto;
+        p {
+            opacity: 0;
+        }
     }
 }
 
 footer {
-    height: 20px;
+    height: 40px;
     background-color: #89ad5f;
     width: 100vw;
-    position: fixed;
+    position: absolute;
     bottom: 0;
+    z-index: 9;
+}
+
+
+#raindrops {
+    width: 100vw;
+    display: grid;
+   justify-items: center;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   position: absolute;
+   bottom: 1000px;
+   transition: linear 3s all;
+   z-index: 8;
+   img {
+       width: 30px;
+   }
 }

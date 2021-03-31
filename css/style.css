@@ -4,7 +4,8 @@
 }
 
 body {
-  background-color: skyblue;
+  background: -webkit-gradient(linear, left top, left bottom, from(skyblue), to(slateblue));
+  background: linear-gradient(skyblue, slateblue);
   height: 100vh;
   width: 100vw;
 }
@@ -19,14 +20,15 @@ body {
       -ms-flex-align: center;
           align-items: center;
   justify-items: center;
-  margin-top: -30px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #flower img {
   z-index: 5;
   margin-bottom: -50px;
-  -webkit-transition: 2s all ease-in-out;
-  transition: 2s all ease-in-out;
+  -webkit-transition: 4s all ease-in-out;
+  transition: 4s all ease-in-out;
 }
 
 #flower #flowerStem {
@@ -35,13 +37,38 @@ body {
   width: 10px;
   height: 100px;
   background-color: #89ad5f;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#flower #flowerStem p {
+  opacity: 0;
 }
 
 footer {
-  height: 20px;
+  height: 40px;
   background-color: #89ad5f;
   width: 100vw;
-  position: fixed;
+  position: absolute;
   bottom: 0;
+  z-index: 9;
+}
+
+#raindrops {
+  width: 100vw;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  position: absolute;
+  bottom: 1000px;
+  -webkit-transition: linear 3s all;
+  transition: linear 3s all;
+  z-index: 8;
+}
+
+#raindrops img {
+  width: 30px;
 }
 /*# sourceMappingURL=style.css.map */
